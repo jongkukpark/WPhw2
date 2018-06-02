@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TODO in HTML5 Skeleton</title>
+	<!-- CSS, JS External 정의 -->
+	<link rel="stylesheet" type="text/css" href="TP1_SKELETON_CSS.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script  src="temp.js"></script>
+</head>
+<!--type = "text/javascript"-->
+<body>
+	<article>
+		<header>
+			<!-- Header (Add ToDo 버튼, keyword 검색) -->
+		<div id="Add_ToDo_Button1">
+			<button onclick="click_btn_Add_ToDo()" id="Add_ToDo_Button">Add ToDo</button>
+		  <!--<p id = "window_Add_Too" ></p>-->
+		</div>
+
+		<div id="Day_Select_Button">
+			<form>
+				<select id = "search_day">
+					<option value = "allday" id="day">day</option>
+					<option value = "Monday">Mon</option>
+					<option value = "Tuesday">Tue</option>
+					<option value = "Wednesday">Wed</option>
+					<option value = "Thursday">Thu</option>
+					<option value = "Friday">Fri</option>
+				</select>
+			</form>
+		</div>
+
+		<div id="Text_Area_Input">
+			<form>
+				<input type = "text" id="search_area" placeholder = "Enter your keyword here" onkeypress="if(event.keyCode == 13) {onKeyDown(); return false;}">
+			</form>
+		</div>
+
+		<div id="deleteDiv">
+			<button id="deleteButton">DELETE</button>
+		</div>
+
+		</header>
+
+
+
+
+		<div id = "window_Add_ToDo" style = "display: none">
+			<section id="writingTransparentBorder"></section>
+			<!-- Add ToDo Button View -->
+			<section id="writingFormContainer">
+
+				<img src="img/delete.png" alt="no image" onclick="temp()">
+
+				<select id = "add_DaySelect">
+
+					<option value = "Monday">Monday</option>
+					<option value = "Tuesday">Tuesday</option>
+					<option value = "Wednesday">Wednesday</option>
+					<option value = "Thursday">Thursday</option>
+					<option value = "Friday">Friday</option>
+				</select>
+				<input type = "text" name = "titleOftoDo" id="toDo_Title"  placeholder = "Enter Title Here"/>
+				<textarea rows = "4" cols="30" id="toDo_Contents" placeholder="Enter Contents Here"></textarea>
+				<input type = "button" class="saveData" value = "Add" id="btn_Add_ToDo_Complete" onclick="btn_Add_ToDo_Complete()"/>
+				<!-- add할때 add -->
+			</section>
+	</div>
+
+
+<!--div 엘리먼트 클릭스 뜨는 창화면-->
+	<div id = "window_Add_ToDo_Edit" style = "display: none">
+		<section id="writingTransparentBorder2"></section>
+		<!-- Add ToDo _Edit_Button View -->
+		<section id="writingFormContainer2">
+
+			<img src="img/delete.png" alt="no image" onclick="temp2()">
+
+			<select id = "add_DaySelect2">
+				<option value = "Monday">Monday</option>
+				<option value = "Tuesday">Tuesday</option>
+				<option value = "Wednesday">Wednesday</option>
+				<option value = "Thursday">Thursday</option>
+				<option value = "Friday">Friday</option>
+			</select>
+
+			<input type = "text" id = "arr_Priority"/>
+			<!-- name = "titleOftoDo_edit" -->
+			<input type = "text"  id="toDo_Title_edit"/>
+			<textarea rows = "4" cols="30" id="toDo_Contents_edit"></textarea>
+			<input type = "button" class="saveData" value="Done" id="btn_Add_ToDo_Edit_Complete" onclick="btn_Add_ToDo_Edit_Complete()"/>
+			<!-- edit할 때 done -->
+		</section>
+</div>
+
+
+		<main>
+			<!-- Middle Bar A~D, Display Area A~D -->
+			<section id="middleBar_mon" class="middle">
+				<section class="middleTop"><Strong>Mon</Strong></section>
+				<section class="displayArea_mon">
+					<div id = "Mon_div">
+					</div>
+				</section>
+			</section>
+			<!--경계선-->
+			<div class="mainLine"></div>
+
+			<section id="middleBar_tue" class="middle">
+				<section class="middleTop"><Strong>Tue</Strong></section>
+				<section class="displayArea_tue">
+					<div id = "Tue_div">
+					</div>
+				</section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_wed" class="middle">
+				<section class="middleTop"><Strong>Wed</Strong></section>
+				<section class="displayArea_wed">
+					<div id = "Wed_div">
+					</div>
+				</section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_thu" class="middle">
+				<section class="middleTop"><Strong>Thu</Strong></section>
+				<section class="displayArea_thu">
+					<div id = "Thu_div">
+					</div>
+				</section>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_Fri" class="middle">
+				<section class="middleTop"><Strong>Fri</Strong></section>
+				<section class="displayArea_Fri">
+					<div id = "Fri_div">
+					</div>
+				</section>
+			</section>
+
+		</main>
+	</article>
+</body>
+
+</html>
