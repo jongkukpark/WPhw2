@@ -12,7 +12,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  <% //ajax로 온 정보를 읽어서 txt파일로 저장
+  <%
     request.setCharacterEncoding("UTF-8");
     String day = request.getParameter("day");
     String title = request.getParameter("title");
